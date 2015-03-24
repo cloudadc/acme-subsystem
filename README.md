@@ -38,10 +38,10 @@ $ ./bin/standalone.sh -c standalone-wildfly82.xml
 /subsystem=tracker/type=war:write-attribute(name=tick,value=1000)
 ~~~
 
-* Deploy a war to a [WildFly](http://wildfly.org/) which `acme-subsystem` be installed, the following log output in console:
+* Deploy [example.war](deployments/example.war), [cool.war](deployments/cool.war), [test.war](deployments/test.war) to a [WildFly](http://wildfly.org/) which `acme-subsystem` be installed, the following log output in console:
 
 ~~~
-12:31:10,511 INFO  [stdout] (Thread-64) Current deployments deployed while war tracking active:
-12:31:10,512 INFO  [stdout] (Thread-64) [example.war]
-12:31:10,513 INFO  [stdout] (Thread-64) Cool: 0
+Current deployments deployed while war tracking active:
+[example.war, cool.war, test.war]
+Cool: 1
 ~~~
